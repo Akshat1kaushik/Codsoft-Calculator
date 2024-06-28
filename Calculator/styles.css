@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0eafc; /* Soft blue background */
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.display {
+    background-color: #2c3e50; /* Darker background for display */
+    color: #ecf0f1; /* Light grey text */
+    text-align: right;
+    padding: 20px;
+    font-size: 2.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.5em;
+    border: 1px solid #ddd;
+    background-color: #ecf0f1; /* Light grey buttons */
+    color: #2c3e50; /* Dark text */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px #b3b3b3; /* Shadow to create 3D effect */
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #bdc3c7; /* Slightly darker grey on hover */
+}
+
+.btn:active {
+    background-color: #95a5a6; /* Even darker grey on active */
+    box-shadow: 0 2px #666666; /* Reduced shadow on active */
+    transform: translateY(3px); /* Move button down on click */
+}
+
+.equal {
+    grid-column: span 2;
+    background-color: #27ae60; /* Green button for equals */
+    color: white;
+    box-shadow: 0 5px #1e8449; /* Shadow for 3D effect */
+}
+
+.equal:hover {
+    background-color: #2ecc71; /* Lighter green on hover */
+}
+
+.equal:active {
+    background-color: #1e8449; /* Darker green on active */
+    box-shadow: 0 2px #145a32; /* Reduced shadow on active */
+    transform: translateY(3px); /* Move button down on click */
+}
+
+/* Additional styling for operator buttons */
+.btn.operator {
+    background-color: #e67e22; /* Orange background for operators */
+    color: white;
+    box-shadow: 0 5px #ba4a00; /* Shadow for 3D effect */
+}
+
+.btn.operator:hover {
+    background-color: #d35400; /* Darker orange on hover */
+}
+
+.btn.operator:active {
+    background-color: #ba4a00; /* Even darker orange on active */
+    box-shadow: 0 2px #7f3300; /* Reduced shadow on active */
+    transform: translateY(3px); /* Move button down on click */
+}
+
+/* Clear and Delete buttons specific styling */
+.btn.clear, .btn.delete {
+    background-color: #e74c3c; /* Red background for clear and delete */
+    color: white;
+    box-shadow: 0 5px #a93226; /* Shadow for 3D effect */
+}
+
+.btn.clear:hover, .btn.delete:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+.btn.clear:active, .btn.delete:active {
+    background-color: #a93226; /* Even darker red on active */
+    box-shadow: 0 2px #782413; /* Reduced shadow on active */
+    transform: translateY(3px); /* Move button down on click */
+}
